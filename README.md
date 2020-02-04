@@ -55,7 +55,7 @@ cd static-page-k8s/
 
 ## 5. Do a Little Bit Tuning
 
-It requires some minimun effort for you take this code and deploy it to the EnSaaS 4.0.
+It requires some minimun effort to take this code and deploy it to the EnSaaS 4.0.
 
 ### I. Setting Up the Host
 
