@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: static-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      component: web
+  template:
+    metadata:
+      labels:
+        component: web
+    spec:
+      containers:
+        - name: static
+          image: allguitars/wisepaas-static:v0.9.8
+          ports:
+            - containerPort: 3000
+          resources:
+            limits:
+              cpu: 200m
+              memory: 1024Mi
+              ephemeral-storage: 128Mi
+            requests:
+              cpu: 100m
+              memory: 512Mi
