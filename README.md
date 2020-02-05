@@ -12,7 +12,7 @@ Go to your [workspace](https://portal-mp-master.es.wise-paas.cn/cluster-info/wor
 
 ![get-config](./img/get-config.png)
 
-You will get prompted to download a config file which contains important credentials. Please make sure you secure this file and **DO NOT LET ANYONE ELSE ACCESS YOUR CONFIG FILE**. You may rename it to whatever you want, say ``wisepass-config``, and then save it to ``$HOME/.kube`` if you are using MacOS.
+You will get prompted to download a config file which contains important credentials. Please make sure you secure this file and **DO NOT LET ANYONE ELSE ACCESS YOUR CONFIG FILE**. You may rename it to whatever you want, say ``wisepaas-config``, and then save it to ``$HOME/.kube`` if you are using MacOS.
 
 <br>
 
@@ -95,7 +95,7 @@ Modify the ``resources`` attribute inside ``./k8s-config/static-deployment.yaml`
 
 <br>
 
-## 5. Appying the Configuration
+## 5. Applying the Configuration
 
 **Note**: Always remember to specify the **namespace** that you are working on while applying the Kubernetes configuration.
 
