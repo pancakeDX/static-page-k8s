@@ -67,15 +67,15 @@ Modify the ``host`` attribute in ``./k8s-config/ingress-service.yaml``.
 
 **Format:**
 
-``ApplicationName``.``Workspace``.``Cluster``.**internal**
+``ApplicationName``.``Namespace``.``ClusterName``.**internal**
 
-Note that ``internal`` keyword is required at the end of the string.
+Note that ``en.internal`` keyword is required at the end of the string.
 
 <br>
 
 ### II. Change the Docker Image Name
 
-Change the ``image`` attribute inside ``./k8s-config/static-deployment.yaml`` file according to the image you just built.
+Change the ``image`` attribute inside ``./k8s-config/static-deployment.yaml`` file according to the image you just built. You may also leave this setting with the default value to use the image we have built and pushed to the EnSaaS official Docker Hub registry.
 
 ```
 <DockerHubAccount>/<ImageName>:<Tag>
@@ -89,7 +89,7 @@ Here is the example in this code:
 
 ### III. Setting Up the Resource Usage
 
-Modify the ``resources`` attribute inside ``./k8s-config/static-deployment.yaml`` file.
+Modify the ``resources`` attribute inside ``./k8s-config/static-deployment.yaml`` file. This example only uses 10m of the CPU because it is just a static webpage. However, you may try to minimize these values as possible as you can to optimiaze the resource utilization.
 
 ![resources](./img/resources.png)
 
@@ -138,12 +138,12 @@ replicaset.apps/static-deployment-5d996d5d54   1         1         1       124m
 In the sample code, we set the host for the Ingress service.
 
 ```yaml
-host: static.se.slave04.internal
+host: staticpage.devspace.eks004.en.internal
 ```
 
 So, to see the page, we need to go to the following URL:
 
-http://static-se-slave04.es.wise-paas.cn/
+http://staticpage-devspace-eks004.sa.wise-paas.com
 
 <br>
 
@@ -152,13 +152,13 @@ Mapping rule -- host vs. URL
 - host
 
   ```
-  <AppName>.<Workspace>.<Cluster>.internal
+  {AppName}.{Namespace}.{ClusterName}.en.internal
   ```
 
 - External URL
 
   ```
-  <AppName>-<Workspace>-<Cluster>.es.wise-paas.cn
+  {AppName}-{Namespace}-{Cluster}.sa.wise-paas.com
   ```
 
   <br>
