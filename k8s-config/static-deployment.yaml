@@ -14,14 +14,14 @@ spec:
     spec:
       containers:
         - name: static
-          image: allguitars/wisepaas-static:v0.9.8
+          image: ensaas/wisepaas-static:v1.0.0
           ports:
             - containerPort: 3000
           resources:
             limits:
-              cpu: 200m
-              memory: 1024Mi
-              ephemeral-storage: 128Mi
+              cpu: 10m
+              memory: 32Mi
+              ephemeral-storage: 32Mi
             requests:
-              cpu: 100m
-              memory: 512Mi
+              cpu: 10m
+              memory: 32Mi
