@@ -1,16 +1,18 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: static-deployment
+  name: static-page
 spec:
   replicas: 1
   selector:
     matchLabels:
       component: web
+      dave: lee
   template:
     metadata:
       labels:
         component: web
+        dave: lee
     spec:
       containers:
         - name: static
