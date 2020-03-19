@@ -1,16 +1,16 @@
 apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
-  name: static-page
+  name: static-page-dave-lee
   annotations:
     kubernetes.io/ingress.class: nginx
     # nginx.ingress.kubernetes.io/rewrite-target: /$1
 spec:
   rules:
-    - host: static-page.level2.eks004.en.internal
+    - host: static-page-dave-lee.level2.eks004.en.internal
       http:
         paths:
           - path: /
             backend:
-              serviceName: static-page
+              serviceName: static-page-dave-lee
               servicePort: 3000

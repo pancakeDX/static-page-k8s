@@ -1,18 +1,18 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: static-page
+  name: static-page-dave-lee
 spec:
   replicas: 1
   selector:
     matchLabels:
       component: web
-      dave: lee
+      student: dave-lee
   template:
     metadata:
       labels:
         component: web
-        dave: lee
+        student: dave-lee
     spec:
       containers:
         - name: static
