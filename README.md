@@ -8,7 +8,7 @@ This is a sample code to demonstrate how to deploy a simple static page to the E
 
 ## 1. Getting Your Own Credentials
 
-Go to your [workspace](https://portal-mp-master.es.wise-paas.cn/cluster-info/workspaces) and download the credentials required to manipulate your resources.
+Go to your workspace or namespace and download the *config key* required to manipulate your Kubernetes resources.
 
 ![get-config](./img/get-config.png)
 
