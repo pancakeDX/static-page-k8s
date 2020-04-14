@@ -4,6 +4,7 @@ metadata:
   name: static-page-dave-lee
 spec:
   replicas: 1
+  revisionHistoryLimit: 0
   selector:
     matchLabels:
       component: web
