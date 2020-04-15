@@ -22,7 +22,7 @@ spec:
             - containerPort: 3000
           resources:
             limits:
-              cpu: 10m
+              cpu: 20m
               memory: 32Mi
               ephemeral-storage: 32Mi
             requests:
