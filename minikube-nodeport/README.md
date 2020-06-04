@@ -49,6 +49,13 @@ static-page-dave-lee-6c8996979-tjj7s   1/1     Running   0          85s
 $ kubectl apply -f minikube-nodeport\
 
 service/server-node-port created
+
+$ kubectl get svc
+
+NAME                   TYPE        CLUSTER-IP       EXTERNAL-IP   PORT(S)          AGE
+kubernetes             ClusterIP   10.96.0.1        <none>        443/TCP          77m
+server-node-port       NodePort    10.107.102.118   <none>        3050:31515/TCP   15m
+static-page-dave-lee   ClusterIP   10.102.109.162   <none>        3000/TCP         18m
 ```
 
 _node-port.yaml_
