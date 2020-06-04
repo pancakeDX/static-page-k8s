@@ -1,4 +1,4 @@
-# Testing Your App on the local MiniKube
+# Testing Your App on the MiniKube
 
 If you want to test your app before deploying it to the production cluster, one way to do this is to use the NodePort service, which provides an entry point to your app without needing to translate the Ingress host to a specific domain.
 
