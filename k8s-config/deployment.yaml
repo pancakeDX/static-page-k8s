@@ -1,23 +1,23 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: static-page-dave-lee
+  name: static-page-wilson-liao
 spec:
   replicas: 1
   revisionHistoryLimit: 0
   selector:
     matchLabels:
       component: web
-      student: dave-lee
+      student: wilson-liao
   template:
     metadata:
       labels:
         component: web
-        student: dave-lee
+        student: wilson-liao
     spec:
       containers:
         - name: static
-          image: ensaas/wisepaas-static:v1.0.0
+          image: wilsonliao/wisepaas-static:1.0.1
           ports:
             - containerPort: 3000
           resources:

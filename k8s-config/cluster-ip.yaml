@@ -1,12 +1,13 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: static-page-dave-lee
+  name: static-page-wilson-liao
 spec:
   type: ClusterIP
   selector:
     component: web
-    student: dave-lee
+    student: wilson-liao
   ports:
     - port: 3000
+      name: http
       targetPort: 3000
